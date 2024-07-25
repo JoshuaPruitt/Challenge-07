@@ -1,15 +1,34 @@
 {
-  "name": "static-site",
+  "name": "challenge-05",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
   },
-  "author": "",
-  "license": "ISC",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Joshua Pruitt",
+    "email": "joshuapruitt6484@gmail.com",
+    "url": ""
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "",
+    "test": ""
+  },
   "dependencies": {
-    "inquirer": "8.2.4"
+    "colors": "^1.4.0",
+    "inquire": "^0.4.8"
   }
 }
