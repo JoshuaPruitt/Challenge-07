@@ -4,6 +4,16 @@
 ${intro}
 
 ## Table of Contents
+## Table of Contents 
+
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Code Snippit](#code-snippit)
+* [Credits](#credits)
+* [License](#license)
+* [Contact Me](#contact-me)
+* [Technologies](#technologies-used)
 
 ## Installation
 ${instalation}
@@ -24,12 +34,12 @@ ${codeSnippit}
 
 ${credits}
 
-## Contact Me 
+## Contact Me
 
 ${contactMe}
     
 
-## Technologies Used 
+## Technologies Used
 
 ${technologies}
 
