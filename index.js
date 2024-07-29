@@ -6,22 +6,23 @@ import { constants } from 'buffer';
 
 let codeSnippitInsert = "````"
 
-//controls the 
-let githubConditional =  {
-    type: 'input',
-    message: "What is your github link?",
-    name: 'contactMeGitHub',
-}
+//function writes to designated file
+const writeToFile = (output, data) =>
+    fs.writeFile(output, data ,(err) =>
+        err ? console.error(err) : console.log('File was written to Successfully!'));
 
-//index number
-let i;
 
-inquirer
-    .prompt([
+const questions = [
         {
             type: 'input',
             message: "What is your programs title?",
             name: 'title',
+        },
+
+        {
+            type: 'input',
+            message: "What is the intro to your program?",
+            name: 'intro',
         },
 
         {
@@ -58,23 +59,28 @@ inquirer
 
         {
             type: 'confirm',
-            message: "Do you wish to add a GitHub link?",
             name: 'contactMe',
-            when(answers) {
-
-                //splice the follow Up question into the array
-                prompt.splice(i+1, 0, githubConditional)
-            }
+            message: "Do you wish to add a GitHub link?",
         },
 
+        {
+            type: 'input',
+            message: "What is your github link?",
+            name: 'gitHub',
+            when(answers) {
+                return answers.contactMe
+            }
+        },
+        
         {
             type: 'input',
             message: "What programs did you use to create your program?",
             name: 'technologies',
         },
-    ])
+];
 
-    .then((prompt) => {
+//this runs the inquire package
+inquirer.prompt(questions).then((prompt) => {
         let data = 
 `
 # ${prompt.title}
@@ -95,7 +101,7 @@ ${prompt.intro}
 * [Technologies](#technologies-used)
 
 ## Installation
-${prompt.instalation}.
+${prompt.installation}.
 
 ## Usage
 ${prompt.usage}.
@@ -132,17 +138,9 @@ ${prompt.technologies}.
         //     }
         // });
             
-        //writes the prompt data into README.md
-        fs.writeFile('README.md', data ,(err) =>
-            err ? console.error(err) : console.log('File was written to Successfully!'));
+        //writes the prompt data into README.md within the output folder
+        writeToFile('./output/README.md', data)
         
-    });
+});
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
