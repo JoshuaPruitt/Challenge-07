@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "inquire": "^0.4.8"
+    "inquire": "^0.4.8",
+    "inquirer": "^10.1.4"
   }
 }
