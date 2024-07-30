@@ -93,7 +93,8 @@ inquirer.prompt(questions).then((prompt) => {
             prompt.codeSnippit,
             prompt.credits,
             prompt.contactMe,
-            prompt.gitHub
+            prompt.gitHub,
+            prompt.technologies
         )
 
         //take newly parsed data and run it throught the dataConstruct function to construct a new README
