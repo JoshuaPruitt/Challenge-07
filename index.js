@@ -4,7 +4,8 @@ import inquirer from "inquirer"
 import colors from "colors"
 import { constants } from 'buffer';
 
-let codeSnippitInsert = "````"
+import Data from "./assets/scripts/data.js"
+
 
 //function writes to designated file
 const writeToFile = (output, data) =>
@@ -81,65 +82,25 @@ const questions = [
 
 //this runs the inquire package
 inquirer.prompt(questions).then((prompt) => {
-        let data = 
-`
-# ${prompt.title}
 
-## Introduction
-${prompt.intro}
+        //parse data from the prompt into the data class
+        const parseData = new Data(
+            prompt.title, 
+            prompt.intro, 
+            prompt.installation, 
+            prompt.usage,
+            prompt.codeSnippitIntro,
+            prompt.codeSnippit,
+            prompt.credits,
+            prompt.contactMe,
+            prompt.gitHub
+        )
 
-## Table of Contents
-## Table of Contents 
+        //take newly parsed data and run it throught the dataConstruct function to construct a new README
+        const NewData = parseData.dataConstruct();
 
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Code Snippit](#code-snippit)
-* [Credits](#credits)
-* [License](#license)
-* [Contact Me](#contact-me)
-* [Technologies](#technologies-used)
-
-## Installation
-${prompt.installation}.
-
-## Usage
-${prompt.usage}.
-
-## Code Snippit
-
-${prompt.codeSnippitIntro}.
-
-${codeSnippitInsert}
-${prompt.codeSnippit}.
-${codeSnippitInsert}
-
-## Credits
-
-${prompt.credits}.
-
-## Contact Me
-
-${prompt.contactMe}.
-            
-
-## Technologies Used
-
-${prompt.technologies}.
-`
-
-        //reads the template file
-        // let template = fs.readFile('./assets/template.txt', 'utf8' ,(err, data) => {
-
-        //     if (data !== undefined){
-        //         console.log(' File was read Successfully!')
-        //     } else {
-        //         console.error(err)
-        //     }
-        // });
-            
         //writes the prompt data into README.md within the output folder
-        writeToFile('./output/README.md', data)
+        writeToFile('./output/README.md', NewData)
         
 });
 
