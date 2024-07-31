@@ -3,14 +3,24 @@ import * as fs from 'fs'
 import inquirer from "inquirer"
 import colors from "colors"
 import { constants } from 'buffer';
-
+//import the Data class from the data file for file writting later
 import Data from "./assets/scripts/data.js"
-
+//index number appended to the end of a file
+let i = 0;
 
 //function writes to designated file
-const writeToFile = (output, data) =>
-    fs.writeFile(output, data ,(err) =>
-        err ? console.error(err) : console.log('File was written to Successfully!'));
+const writeToFile = (fileName, data) =>
+    fs.writeFile(fileName, data , {flag: "wx"}, (err) => {
+        //an error starts if a file already exists. If a file exists append a number to the end of the file
+        if (err){
+            i++;
+            console.log("File Already Exists");
+            fileName = fileName.slice(0, 15) + `${i}` + '.md';
+            writeToFile(fileName, data);
+        } else {
+            console.log('File was written to Successfully!');
+        }
+});
 
 
 const questions = [
@@ -104,9 +114,6 @@ const questions = [
 
 //this runs the inquire package
 inquirer.prompt(questions).then((prompt) => {
-    // const dataArr = 
-    // [prompt.title, prompt.intro, prompt.installation, prompt.usage, prompt.codeSnippitIntro, 
-    //     prompt.codeSnippit, prompt.credits, prompt.contactMe, prompt.gitHub, prompt.contactMe2, prompt.linkedIn, prompt.technologies];
 
     //parse data from the prompt into the data class
     const parseData = new Data(prompt);

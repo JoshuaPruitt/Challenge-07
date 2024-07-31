@@ -20,7 +20,7 @@ class Data {
     dataConstruct() {
         let codeSnippitInsert = "````"
 
-        //this serves as the template for which all the ReadMe's are generated on
+        //this serves as the template for which all the ReadMe's are generated upon
         let data = 
 
 `# ${this.title}
@@ -64,10 +64,10 @@ ${this.technologies}.
 ${this.credits}.
 
 ${this.contactMe || this.contactMe2 ? "## Contact Me" : ""}
-<ul>
+${this.contactMe || this.contactMe2 ? "<ul>" : ""}
 ${this.contactMe ? `<li><a href="${this.gitHub}>My GitHub</a></li>` : ""}
 ${this.contactMe2 ? `<li><a href="${this.linkedIn}"></a>My LinkedIn</li>` : ``}
-<ul>          
+${this.contactMe || this.contactMe2 ? "</ul>" : ""}       
 `
         return data
     }
