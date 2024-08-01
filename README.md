@@ -55,9 +55,10 @@ Licensed under the MIT license.
 
 ## Credits
 <ul>
-<li>Joshua Pruitt (me)</li>.
+<li>Joshua Pruitt (me)</li>
 <li>Coding bootcamp staff (for their help with Coding)</li>
 <ul>
+
 ## Contact Me
 <ul>
 <li>My email: joshuapruitt6484@gmail.com</li>
