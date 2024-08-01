@@ -82,10 +82,14 @@ ${this.features}
 Licensed under the ${this.license} license
 
 ## Technologies Used
-${this.technologies}
+<ul>
+<li>${this.technologies}</li>
+</ul>
 
 ## Credits
-${this.credits}
+<ul>
+<li>${this.credits}</li>
+</ul>
 
 ## Contact Me
 ${this.contactMe || this.contactMe2 ? "<ul>" : ""}

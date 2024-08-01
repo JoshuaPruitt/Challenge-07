@@ -18,7 +18,7 @@ This program generates README's for all your projects! This README was made usin
 * [Contact Me](#contact-me)
 
 ## Installation
-Just download the files onto your machine and run "index.js" with node.js!.
+Just download the files onto your machine and run "index.js" with node.js!
 
 ## Usage
 Once started the user is prompted with questions. You will be prompted to type a messages, to answer yes or no questions, and to select an option from a list. All of the inputted information is then taken and pushed to a README file. Once the questions have been finished you can look in the programs directory at the "  output" folder to find your finished readme file.
@@ -47,14 +47,17 @@ Some features include a badge being generated for your selected license. Writing
 Licensed under the MIT license.
 
 ## Technologies Used
-Inquire.js (for question prompts).
-Visual Studio Code (for writting code).
-Mozzila Web Docs and W3 Schools (for getting help with JavaScript).
+<ul>
+<li>Inquire.js (for question prompts).</li>
+<li>Visual Studio Code (for writting code).</li>
+<li>Mozzila Web Docs and W3 Schools (for getting help with JavaScript).</li>
+</ul>
 
 ## Credits
-Joshua Pruitt (me).
-Coding bootcamp staff (for their help with Coding)
-
+<ul>
+<li>Joshua Pruitt (me)</li>.
+<li>Coding bootcamp staff (for their help with Coding)</li>
+<ul>
 ## Contact Me
 <ul>
 <li>My email: joshuapruitt6484@gmail.com</li>
