@@ -4,7 +4,7 @@ import inquirer from "inquirer"
 import colors from "colors"
 import { constants } from 'buffer';
 //import the Data class from the data file for file writting later
-import Data from "./assets/scripts/data.js"
+import Data from "./assets/data.js"
 //index number appended to the end of a file
 let i = 0;
 
