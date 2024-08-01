@@ -89,15 +89,13 @@ ${this.credits}
 
 ## Contact Me
 ${this.contactMe || this.contactMe2 ? "<ul>" : ""}
-<li>My email ${this.email}</li>
-${this.contactMe ? `<li><a href="${this.gitHub}>My GitHub</a></li>` : ""}
-${this.contactMe2 ? `<li><a href="${this.linkedIn}"></a>My LinkedIn</li>` : ``}
+<li>My email: ${this.email}</li>
+${this.contactMe ? `<li><a href=${this.gitHub}>My GitHub</a></li>` : ""}
+${this.contactMe2 ? `<li><a href=${this.linkedIn}"></a>My LinkedIn</li>` : ``}
 ${this.contactMe || this.contactMe2 ? "</ul>" : ""}       
 `
         return data
     }
-
-    
 }
 
 export default Data;

@@ -57,7 +57,7 @@ Coding bootcamp staff (for their help with Coding)
 
 ## Contact Me
 <ul>
-<li>My email joshuapruitt6484@gmail.com</li>
-<li><a href="https://github.com/JoshuaPruitt>My GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/joshua-pruitt-1a494a311/"></a>My LinkedIn</li>
+<li>My email: joshuapruitt6484@gmail.com</li>
+<li><a href=https://github.com/JoshuaPruitt>My GitHub</a></li>
+<li><a href=https://www.linkedin.com/in/joshua-pruitt-1a494a311/></a>My LinkedIn</li>
 </ul>       
