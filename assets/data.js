@@ -1,5 +1,4 @@
 
-
 class Data {
     
     constructor(dataArr){
@@ -64,29 +63,29 @@ ${this.intro}
 * [Contact Me](#contact-me)
 
 ## Installation
-${this.installation}.
+${this.installation}
 
 ## Usage
-${this.usage}.
+${this.usage}
 
 ## Code Snippit
-${this.codeSnippitIntro}.
+${this.codeSnippitIntro}
 
 ${codeSnippitInsert}
-${this.codeSnippit}.
+${this.codeSnippit}
 ${codeSnippitInsert}
 
 ## Features
-${this.features}.
+${this.features}
 
 ## License
-Licensed under the ${this.license} license.
+Licensed under the ${this.license} license
 
 ## Technologies Used
-${this.technologies}.
+${this.technologies}
 
 ## Credits
-${this.credits}.
+${this.credits}
 
 ## Contact Me
 ${this.contactMe || this.contactMe2 ? "<ul>" : ""}

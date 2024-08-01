@@ -14,11 +14,11 @@ const writeToFile = (fileName, data) =>
         //an error starts if a file already exists. If a file exists append a number to the end of the file
         if (err){
             i++;
-            console.log("File Already Exists");
+            console.log("File Already Exists! Adding number to file name.".red);
             fileName = fileName.slice(0, 15) + `${i}` + '.md';
             writeToFile(fileName, data);
         } else {
-            console.log('File was written to Successfully!');
+            console.log('File was written to Successfully!'.bgGreen);
         }
 });
 
@@ -26,32 +26,32 @@ const writeToFile = (fileName, data) =>
 const questions = [
         {
             type: 'input',
-            message: "What is your programs title?",
+            message: "What is your programs title?".blue,
             name: 'title',
         },
 
         {
             type: 'input',
-            message: "What is the intro to your program?",
+            message: "What is the intro to your program?".white,
             name: 'intro',
         },
 
         {
             type: 'input',
-            message: "What does your program require to be installed?",
+            message: "What does your program require to be installed?".blue,
             name: 'installation',
         },
 
         {
             type: 'input',
-            message: "How do you use your program?",
+            message: "How do you use your program?".white,
             name: 'usage',
         
         },
 
         {
             type: 'input',
-            message: "What is an important piece of code from your program? (code please)",
+            message: "What is an important piece of code from your program? (code please)".blue,
             name: 'codeSnippit',
             
         },
@@ -64,7 +64,7 @@ const questions = [
 
         {
             type: 'input',
-            message: "What are some features of your program?",
+            message: "What are some features of your program?".blue,
             name: 'features',
         },
 
@@ -77,7 +77,7 @@ const questions = [
 
         {
             type: 'input',
-            message: "What programs did you use to create your program?",
+            message: "What programs did you use to create your program?".blue,
             name: 'technologies',
         },
 
@@ -89,7 +89,7 @@ const questions = [
 
         {
             type: 'input',
-            message: "What is the email you want to be contacted on?",
+            message: "What is the email you want to be contacted on?".blue,
             name: "email",
         },
 
@@ -101,7 +101,7 @@ const questions = [
 
         {
             type: 'input',
-            message: "What is your github link?",
+            message: "What is your github link?".blue,
             name: 'gitHub',
             when(answers) {
                 return answers.contactMe
@@ -116,7 +116,7 @@ const questions = [
 
         {
             type: 'input',
-            message: "What is the link of your LinkedIn profile?",
+            message: "What is the link of your LinkedIn profile?".blue,
             name: 'linkedIn',
             when(answers) {
                 return answers.contactMe2
