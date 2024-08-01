@@ -69,6 +69,13 @@ const questions = [
         },
 
         {
+            type: 'list',
+            message: "What License do you want to use for your Program?",
+            name: 'license',
+            choices: ["BSD", "EPL-1.0", "GPLv3", "GPLv2", "IPL-1.0", "MIT", "MPL-2.0"]
+        },
+
+        {
             type: 'input',
             message: "What programs did you use to create your program?",
             name: 'technologies',
@@ -78,6 +85,12 @@ const questions = [
             type: 'input',
             message: "Who are the credits for your code?",
             name: 'credits',
+        },
+
+        {
+            type: 'input',
+            message: "What is the email you want to be contacted on?",
+            name: "email",
         },
 
         {
