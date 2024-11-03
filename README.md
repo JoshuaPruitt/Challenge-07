@@ -7,6 +7,8 @@
 
 This program generates README's for all your projects! This README was made using this program!
 
+Click <a href="">here</a> to watch a demonstration video showing off the assignment!
+
 ## Table of Contents
 
 - [Installation](#installation)
