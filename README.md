@@ -7,7 +7,7 @@
 
 This program generates README's for all your projects! This README was made using this program!
 
-Click <a href="">here</a> to watch a demonstration video showing off the assignment!
+Click <a href="https://drive.google.com/file/d/10h9n0UHXqB8REVhx8WuPHIHEVCXssi_W/view?usp=sharing">here</a> to watch a demonstration video showing off the assignment!
 
 ## Table of Contents
 
